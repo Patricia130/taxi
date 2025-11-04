@@ -1,27 +1,25 @@
 workflows:
   android-native-release:
-    name: Build Android Native Release APK and AAB
+    name: Build Android Native Release
     max_build_duration: 60
     instance_type: mac_mini_m1
     environment:
       vars:
-        GRADLE_TASK: assembleRelease
-        AAB_TASK: bundleRelease
         JAVA_VERSION: 17
+      android:
+        image: default
     scripts:
-      - name: Configurar Java e Android SDK
+      - name: Configurar ambiente
         script: |
           export JAVA_HOME=$(/usr/libexec/java_home -v 17)
           export PATH=$JAVA_HOME/bin:$PATH
           echo "Usando Java 17 em $JAVA_HOME"
-          sdkmanager --update || true
-          sdkmanager "platforms;android-33" "build-tools;33.0.2"
       - name: Limpar projeto
         script: ./gradlew clean
       - name: Compilar APK de release
-        script: ./gradlew $GRADLE_TASK
-      - name: Compilar App Bundle (AAB)
-        script: ./gradlew $AAB_TASK
+        script: ./gradlew assembleRelease
+      - name: Compilar AAB de release
+        script: ./gradlew bundleRelease
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
       - app/build/outputs/bundle/release/app-release.aab
