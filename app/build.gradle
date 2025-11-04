@@ -62,8 +62,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 
     useLibrary 'org.apache.http.legacy'
@@ -94,6 +98,9 @@ dependencies {
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
     implementation 'com.airbnb.android:lottie:3.7.0'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
+
+    // ✅ Country Code Picker (resolve os erros ccp_*)
+    implementation 'com.hbb20:ccp:2.5.0'
 
     // Firebase
     implementation 'com.google.firebase:firebase-messaging:21.1.0'
