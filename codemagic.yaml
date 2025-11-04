@@ -6,10 +6,8 @@ workflows:
     environment:
       vars:
         JAVA_VERSION: 17
-      android:
-        image: default
     scripts:
-      - name: Configurar ambiente
+      - name: Configurar Java 17
         script: |
           export JAVA_HOME=$(/usr/libexec/java_home -v 17)
           export PATH=$JAVA_HOME/bin:$PATH
