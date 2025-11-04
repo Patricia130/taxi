@@ -1,0 +1,311 @@
+@file:Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
+package com.newtaxiprime.user.taxiapp.sidebar.payment
+
+/**
+ * @package com.newtaxiprime.user
+ * @subpackage Side_Bar
+ * @category Profile
+ * @author Seen Technologies
+ * 
+ */
+
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
+import android.text.TextWatcher
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import butterknife.BindView
+import butterknife.ButterKnife
+import butterknife.OnClick
+import com.google.gson.Gson
+import com.newtaxiprime.user.R
+import com.newtaxiprime.user.appcommon.configs.RunTimePermission
+import com.newtaxiprime.user.appcommon.configs.SessionManager
+import com.newtaxiprime.user.appcommon.datamodels.JsonResponse
+import com.newtaxiprime.user.appcommon.interfaces.ApiService
+import com.newtaxiprime.user.appcommon.interfaces.ServiceListener
+import com.newtaxiprime.user.appcommon.network.AppController
+import com.newtaxiprime.user.appcommon.utils.CommonMethods
+import com.newtaxiprime.user.appcommon.utils.CommonMethods.Companion.DebuggableLogV
+import com.newtaxiprime.user.appcommon.utils.Enums
+import com.newtaxiprime.user.appcommon.utils.RequestCallback
+import com.newtaxiprime.user.appcommon.views.CommonActivity
+import com.newtaxiprime.user.taxiapp.views.customize.CustomDialog
+import kotlinx.android.synthetic.main.app_activity_add_wallet.*
+import java.io.*
+import java.util.*
+import javax.inject.Inject
+
+
+/* ************************************************************
+   Rider profile details page
+    *********************************************************** */
+
+class TransferMoney : CommonActivity(), ServiceListener{
+
+    lateinit var dialog: AlertDialog
+    @Inject
+    lateinit var sessionManager: SessionManager
+    @Inject
+    lateinit var commonMethods: CommonMethods
+    @Inject
+    lateinit var apiService: ApiService
+    @Inject
+    lateinit var customDialog: CustomDialog
+    @Inject
+    lateinit var runTimePermission: RunTimePermission
+    @Inject
+    lateinit var gson: Gson
+    @BindView(R.id.sendbutton)
+    lateinit var sendbutton: Button // Save button
+
+    @BindView(R.id.tv_caller_name)
+    lateinit var wallet_amt: TextView
+
+    @BindView(R.id.amounttext)
+    lateinit var amounttext: EditText
+    //lateinit var walletamt: EditText
+
+    @BindView(R.id.input_account)
+    lateinit var input_account: EditText
+
+    lateinit var accountgettext: String
+    lateinit var amountgettext: String
+
+
+    protected var isInternetAvailable: Boolean = false  // Check Network available or not
+
+    
+
+    @OnClick(R.id.back)
+    fun back() {
+        onBackPressed()
+    }
+
+    @OnClick(R.id.sendbutton)
+    fun sendbutton() {
+        isInternetAvailable = commonMethods.isOnline(applicationContext)
+        if (!isInternetAvailable) {
+            commonMethods.showMessage(this@TransferMoney, dialog, getString(R.string.no_connection))
+        } else {
+
+            amountgettext = amounttext.text.toString()
+            accountgettext = input_account.text.toString()
+
+            try {
+                val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
+            /**
+             * Update Rider profile
+             */
+
+            hideSoftKeyboard()
+
+            amounttext.isFocusableInTouchMode = true
+            input_account.isFocusableInTouchMode=true
+            // Update profile API Call
+            senMoney()
+        }
+    }
+
+   
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.app_activity_wallet_transfer)
+        ButterKnife.bind(this)
+        AppController.appComponent.inject(this)
+        dialog = commonMethods.getAlertDialog(this)
+
+
+        /**Commmon Header Text View */
+        commonMethods.setheaderText(resources.getString(R.string.wallet_transfer),common_header)
+        // Check network available or not
+        isInternetAvailable = commonMethods.isOnline(applicationContext)
+
+        input_account.addTextChangedListener(NameTextWatcher(input_account))
+        amounttext.addTextChangedListener(NameTextWatcher(amounttext))
+
+        wallet_amt.text = sessionManager.currencySymbol + sessionManager.walletAmount
+       
+
+
+        
+
+    }
+
+    fun hideSoftKeyboard() {
+        if (currentFocus != null) {
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+        }
+    }
+
+    /**
+     * Back button pressed
+     */
+    override fun onBackPressed() {
+        super.onBackPressed()
+        sessionManager.profileDetail = ""
+        sessionManager.phoneNumber = ""
+        overridePendingTransition(R.anim.ub__slide_in_left, R.anim.ub__slide_out_right)
+    }
+
+    override fun onSuccess(jsonResp: JsonResponse, data: String) {
+        commonMethods.hideProgressDialog()
+        val statuscode = commonMethods.getJsonValue(jsonResp.strResponse, "status_code", String::class.java) as String
+
+        if (!jsonResp.isOnline) {
+            if (!TextUtils.isEmpty(data))
+                commonMethods.showMessage(this, dialog, data)
+            return
+        }
+        when (jsonResp.requestCode) {
+
+            Enums.REQ_ADD_WALLET ->
+                if (jsonResp.isSuccess) {
+                    if (statuscode.equals("2")) run {
+                        commonMethods.showProgressDialog(this@TransferMoney)
+                        commonMethods.showMessage(this, dialog, jsonResp.statusMsg)
+                        //statusDialog(jsonResp.statusMsg)
+                        commonMethods.getClientSecret(jsonResp, this)
+                    } else {
+                        val walletamount = commonMethods.getJsonValue(jsonResp.strResponse, "wallet_amount", String::class.java) as String
+
+                        sessionManager.walletAmount = walletamount
+                        //statusDialog(jsonResp.statusMsg)
+                        commonMethods.showMessage(this, dialog, jsonResp.statusMsg)
+                        wallet_amt.text = sessionManager.currencySymbol + sessionManager.walletAmount
+                        //walletamt.setText("")
+                        commonMethods.hideProgressDialog()
+                    }
+                } else if (statuscode.equals("2")) run {
+                    commonMethods.showProgressDialog(this@TransferMoney)
+                    //statusDialog(jsonResp.statusMsg)
+                    commonMethods.getClientSecret(jsonResp, this)
+                } else if (!TextUtils.isEmpty(jsonResp.statusMsg)) {
+                    commonMethods.hideProgressDialog()
+                    commonMethods.showMessage(this, dialog, jsonResp.statusMsg)
+                    //statusDialog(jsonResp.statusMsg)
+                    DebuggableLogV("jsonResp.getStatusMsg()", "" + jsonResp.statusMsg)
+                }
+
+            else -> {
+            }
+        }
+    }
+
+    override fun onFailure(jsonResp: JsonResponse, data: String) {
+        commonMethods.hideProgressDialog()
+    }
+
+    /**
+     * Update rider profile details API called
+     */
+   // fun senMoney() {
+       // commonMethods.showProgressDialog(this)
+      //  apiService.transferMoney(accountgettext, amountgettext,sessionManager.accessToken!!).enqueue(RequestCallback(REQ_UPDATE_PROFILE, this))
+    //}
+
+    fun senMoney(){
+        commonMethods.showProgressDialog(this)
+        apiService.transferMoney(sendMoneyToUser()).enqueue(RequestCallback(
+            Enums.REQ_ADD_WALLET, this))
+    }
+
+    private fun sendMoneyToUser(): LinkedHashMap<String, String> {
+        val addWalletParams = LinkedHashMap<String, String>()
+        addWalletParams["token"] = sessionManager.accessToken.toString()
+        addWalletParams["amount"] = amountgettext
+        addWalletParams["account_number"]=accountgettext
+        return addWalletParams
+    }
+
+
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+
+        }
+
+    }
+
+
+    private fun validateAccount(): Boolean {
+        if (input_account.text.toString().trim { it <= ' ' }.isEmpty()) {
+            //  input_layout_first.error = getString(R.string.error_msg_firstname)
+            //requestFocus(input_first);
+            return false
+        } else if(input_account.text.trim().length  < 8){
+            return false
+        } else if (input_account.text.trim().length>8){
+            return false
+
+        }
+
+        return true
+    }
+
+
+    private fun validateAmount(): Boolean {
+        if (amounttext.text.toString().trim { it <= ' ' }.isEmpty()) {
+            //  input_layout_first.error = getString(R.string.error_msg_firstname)
+            //requestFocus(input_first);
+            return false
+        } else if (amounttext.text.toString().trim() > sessionManager.walletAmount.toString()){
+            return false
+        }
+
+        return true
+    }
+
+
+
+    /**
+     * Name edit text listener
+     */
+    private inner class NameTextWatcher(private val view: View) : TextWatcher {
+
+        override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+            DebuggableLogV("beforeTextChanged", "beforeTextChanged")
+        }
+
+        override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+            //setting save button active when all dates are given
+            if (validateAmount() && validateAccount()) {
+                sendbutton.isEnabled = true
+                sendbutton.setBackground(ContextCompat.getDrawable(applicationContext,R.drawable.app_curve_button_yellow))
+            } else {
+                sendbutton.isEnabled = false
+                sendbutton.setBackground(ContextCompat.getDrawable(applicationContext,R.drawable.app_curve_button_yellow_disable))
+            }
+        }
+
+        override fun afterTextChanged(editable: Editable) {
+            when (view.id) {
+                R.id.input_account -> validateAccount()
+                R.id.amounttext -> validateAmount()
+
+
+                else -> {
+
+                }
+            }// validatePhone();
+
+        }
+    }
+}

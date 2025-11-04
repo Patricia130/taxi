@@ -1,0 +1,3 @@
+//include ':app', ':signinwithapplebutton'
+include ':app'
+include ':app', ':imageslider'

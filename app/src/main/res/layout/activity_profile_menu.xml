@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/common_header"
+        layout="@layout/app_common_header"
+        />
+    <RelativeLayout
+        android:id="@+id/parent_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_header"
+        android:background="@color/newtaxi_app_yellow"
+        >
+        <RelativeLayout
+            android:id="@+id/imglatout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_10adp"
+            android:paddingBottom="@dimen/_5adp">
+
+            <include
+                android:id="@+id/common_profile"
+                layout="@layout/app_common_profile_card_view"
+                android:layout_width="@dimen/_100adp"
+                android:layout_height="@dimen/_100adp">
+
+            </include>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20adp"
+                android:layout_marginTop="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_15adp"
+                android:layout_toEndOf="@+id/common_profile"
+                android:orientation="vertical">
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:id="@+id/nametext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6adp"
+                    android:layout_marginTop="@dimen/_5adp"
+                    android:maxLength="100"
+                    android:maxLines="2"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_16asp"
+                    app:fontName="@string/font_Medium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        app:ccp_arrowSize="@dimen/_16asp"
+                        app:ccp_autoDetectLanguage="true"
+                        app:ccp_showArrow="false"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textSize="@dimen/_15asp" />
+
+                    <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/_5adp"
+                        android:layout_toEndOf="@+id/ccp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/newtaxi_app_black"
+                        android:textSize="@dimen/_15asp"
+                        app:fontName="@string/fonts_UBERBook" />
+
+                </RelativeLayout>
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6adp"
+                    android:layout_marginTop="@dimen/_3adp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_15asp"
+                    app:fontName="@string/fonts_UBERBook" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_500adp"
+        android:layout_below="@+id/parent_profile"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/app_top_curve_white">
+
+        <RelativeLayout
+            android:id="@+id/parent_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20adp"
+            android:layout_marginTop="@dimen/_20adp"
+            android:layout_marginEnd="@dimen/_20adp"
+            android:layout_marginBottom="@dimen/_80adp">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlt_editprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_editprofileimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_editprofileimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+
+                <ImageView
+                    android:id="@+id/iv_profilearrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/rlt_editprofile"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/rlt_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_paymentimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/hand"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_paymentimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/payment"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+
+                <ImageView
+                    android:id="@+id/iv_paymentarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/rlt_payment"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+
+            <RelativeLayout
+                android:id="@+id/referrallayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_referralimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/referral"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_referralimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/referral"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+
+                <ImageView
+                    android:id="@+id/iv_referralarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/referrallayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/emercontactlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_emercontactimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/siren"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_emercontactimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/emergency_contacts"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+                <ImageView
+                    android:id="@+id/iv_emerarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewbook"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/emercontactlayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/manuallayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewbook"
+
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_manualimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/instructions"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_manualimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/manual_booking"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+                <ImageView
+                    android:id="@+id/iv_manualarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewsupport"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/manuallayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/supportlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewsupport"
+
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginEnd="@dimen/_20adp"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_supportimage"
+                    android:layout_width="@dimen/_25adp"
+                    android:layout_height="@dimen/_25adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/support"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_supportimage"
+                    android:gravity="center_vertical"
+                    android:text="@string/support"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+                <ImageView
+                    android:id="@+id/iv_supportarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/supportlayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/privacylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view4"
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginEnd="@dimen/_20adp">
+
+                <ImageView
+                    android:id="@+id/iv_privacyimage"
+                    android:layout_width="@dimen/_20adp"
+                    android:layout_height="@dimen/_20adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/privacy"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_privacyimage"
+                    android:text="@string/sigin_terms4"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+
+                <ImageView
+                    android:id="@+id/iv_policyarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/privacylayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/termslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/privacylayout"
+
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginEnd="@dimen/_20adp">
+
+                <ImageView
+                    android:id="@+id/iv_termsimage"
+                    android:layout_width="@dimen/_20adp"
+                    android:layout_height="@dimen/_20adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/terms"
+                    app:tint="@color/newtaxi_app_yellow" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_termsimage"
+                    android:text="@string/sigin_terms2"
+                    android:textColor="@color/newtaxi_app_black"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+
+                <ImageView
+                    android:id="@+id/iv_termsarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_10adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_right_arrow"
+                    app:tint="@color/newtaxi_app_yellow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@+id/termslayout"
+                android:layout_marginStart="@dimen/_10adp"
+                android:layout_marginEnd="@dimen/_10adp"
+                android:background="@color/newtaxi_app_ash_light" />
+
+            <RelativeLayout
+                android:id="@+id/logoutlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/termslayout"
+                android:layout_marginTop="@dimen/_5adp"
+                android:layout_marginBottom="@dimen/_20adp"
+                android:layout_marginEnd="@dimen/_20adp">
+
+                <ImageView
+                    android:id="@+id/iv_signoutimage"
+                    android:layout_width="@dimen/_20adp"
+                    android:layout_height="@dimen/_20adp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/app_ic_signout" />
+
+
+                <com.newtaxiprime.user.appcommon.custompalette.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20adp"
+                    android:layout_marginTop="@dimen/_20adp"
+                    android:layout_marginEnd="@dimen/_20adp"
+                    android:layout_marginBottom="@dimen/_20adp"
+                    android:layout_toEndOf="@+id/iv_signoutimage"
+                    android:text="@string/signOut"
+                    android:textColor="@color/newtaxi_app_red"
+                    android:textSize="@dimen/_14asp"
+                    app:fontName="@string/font_Medium" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [<!ENTITY appname "NewTaxi Prime">]>
+
+<resources>
+
+
+    <string name="layout_direction">0</string>
+    <string name="use_in_case_of_emergency">Gebruik in geval van nood</string>
+    <string name="payment_name">"Betaling &appname;"</string>
+    <string name="getmoving">Beweeg rond met de &appname;</string>
+    <string name="navigation_drawer_open">navigatielade openen</string>
+    <string name="navigation_drawer_close">Navigatielade sluiten</string>
+
+    <string name="myprofile">Mijn profiel</string>
+    <string name="confirm_seat_msg">Hoeveel stoelen heb je nodig?</string>
+    <string name="connectsocila">Of maak verbinding met sociale netwerken</string>
+    <string name="phonenumber">Telefoonnummer</string>
+
+    <string name="few_seconds">Dit kan enkele seconden duren</string>
+
+    <string name="chooseaccount">kies een account</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+
+    <string name="errormsg_paymnet_type">Kies uw betalingstype</string>
+    <string name="alert_your_emergency_contacts">Waarschuw uw contacten voor noodgevallen</string>
+    <string name="welcomeback">Welkom terug, log in om verder te gaan</string>
+    <string name="forgotpassword">Ik ben mijn wachtwoord vergeten</string>
+    <string name="resetpasswords">Stel je wachtwoord opnieuw in</string>
+    <string name="creatacount">Maak hier uw account aan</string>
+    <string name="soscontent">De &appname; verzamelt locatiegegevens tijdens een actieve boeking vanaf uw apparaat om een ​​veilige en soepele ritervaring te garanderen</string>
+    <string name="close">DICHTBIJ</string>
+    <string name="continue_alert">Doorgaan</string>
+    <string name="continue_to_send_alert">Doorgaan met het verzenden van een waarschuwing?</string>
+    <string name="sucessmessfe">Bericht succesvol verzonden</string>
+    <string name="messagesenttoadmin">Bericht succesvol verzonden naar beheerder</string>
+
+
+    <string name="enteremailadress">Voer het e-mailadres in waarmee je je hebt geregistreerd</string>
+    <string name="car_unavailable">"Helaas is &appname; momenteel niet beschikbaar in uw regio."</string>
+    <string name="email">E-MAIL</string>
+    <string name="cancel">ANNULEREN</string>
+    <string name="cancelrequest">ANNULERINGSAANVRAAG</string>
+    <string name="editaccount">bewerk account</string>
+    <string name="textpayment">Betalingswijze</string>
+    <string name="paypal_payment">PayPal</string>
+
+    <string name="helptitle">Helpen</string>
+
+    <string name="capacity">Capaciteit</string>
+    <string name="fare">Te doen</string>
+    <string name="done">GEDAAN</string>
+    <string name="continues">"DOORGAAN"</string>
+
+    <string name="pricepresented">Uw tarief is de prijs die voorafgaand aan de reis wordt getoond of is gebaseerd op de onderstaande tarieven en         andere toepasselijke toeslagen en aanpassingen.</string>
+    <string name="basefare">Basis</string>
+    <string name="perminute">Per minuut</string>
+    <string name="perkm">per km</string>$37.10
+
+    <string name="requestuber">"VERZOEK"</string>
+    <string name="amountno7">$ 53,00</string>
+    <string name="ubergo">&appname;Go</string>
+    <string name="cancel_your_trip">"ANNULEER UW REIS"</string>
+
+    <string name="paymentmethods">Betaalmethodes</string>
+    <string name="cash">Geld</string>
+    <string name="wallets">Portefeuille</string>
+    <string name="promotions">promoties</string>
+    <string name="add">"Toevoegen"</string>
+    <string name="add_promo">"Voeg promotie-/cadeaucode toe"</string>
+    <string name="free_trip">gratis reis naar</string>
+    <string name="from">in</string>
+    <string name="off">BUITEN</string>
+    <string name="promo_applied">Promotie toegepast</string>
+    <string name="enter_promo_code">"Vul je actie-/cadeaucode in"</string>
+    <string name="wallet">Portefeuille</string>
+    <string name="use_wallet">portemonnee gebruiken</string>
+    <string name="wallet_amount">De waarde van uw portefeuille is</string>
+    <string name="add_amount">Voeg geld toe</string>
+    <string name="payable_amount">"Te betalen bedrag"</string>
+    <string name="paid_amount">"Betaald bedrag"</string>
+    <string name="enter_amount">Voer de waarde in</string>
+    <string name="add_money">"Voeg geld toe aan portemonnee</string>
+    <string name="pay">Betalen</string>
+    <string name="trip_id">Reis-ID:</string>
+    <string name="proceed">Doorgaan</string>
+    <string name="waitfordriver">Wachten op bevestiging van chauffeur</string>
+    <string name="paypal">PayPal</string>
+    <string name="credit_or_debit_card">Creditcard of betaalpas toevoegen</string>
+    <string name="change_credit_or_debit_card">Creditcard of betaalpas wijzigen</string>
+    <string name="card">Kaart</string>
+    <string name="save">Opslaan</string>
+
+    <string name="baseFare">Basis</string>
+    <string name="currency">"Munteenheid"</string>
+
+    <string name="selectcurrency">"Kies valuta"</string>
+    <string name="signOut">Uitloggen</string>
+    <string name="tripDetails">Reisdetails</string>
+    <string name="fordFiesta">Ford Fiesta</string>
+    <string name="FordFiesta">Ford Fiesta</string>
+
+
+    <string name="YourTrips">Jouw Reizen</string>
+    <string name="address">6, Elliots Promenade odaimanagar, Besant Nagar, Chennai, Tamil Nadu 600090, India</string>
+
+    <string name="request_car_msg">"In contact komen</string>
+    <string name="request_car_msg1">" dichtbij jou…</string>
+
+    <string name="favorites">favorieten</string>
+    <string name="addhome">Thuis toevoegen</string>
+    <string name="addwork">werk toevoegen</string>
+    <string name="home">"Huis</string>
+    <string name="work">"Werken"</string>
+    <string name="events">evenementen</string>
+    <string name="signout_msg">"Weet je zeker dat je wilt stoppen?"</string>
+    <string name="cancel_s">"Annuleren"</string>
+    <string name="signout">"Uitgaan"</string>
+
+    <string name="accountsetting">Accountconfiguraties</string>
+
+    <string name="resend">code nogmaals versturen</string>
+    <string name="affordable">Toegankelijke en dagelijkse rondleidingen</string>
+
+
+    <string name="tripsreview">Beoordeling van reizen en tarieven</string>
+    <string name="accountpayment">Account- en betalingsopties</string>
+    <string name="guideuber">Een gids voor &appname;</string>
+    <string name="signingup">Aanmelden</string>
+    <string name="more">Meest</string>
+    <string name="accessibility">Toegankelijkheid</string>
+    <string name="additionaltopics">aanvullende onderwerpen</string>
+
+
+    <string name="farebreakdown">Uitsplitsing van tarieven</string>
+    <string name="farediscribction">Het tarief is de prijs die wordt getoond op het moment van boeking of, als de reis verandert, wordt het tarief gebaseerd op de opgegeven tarieven.</string>
+
+
+    <string name="payment">Betalingswijze</string>
+    <string name="yourtrips">Jouw Reizen</string>
+    <string name="begin_trip">"Begin reis"</string>
+    <string name="Rating">Classificatie</string>
+    <string name="completed">afgesloten</string>
+    <string name="Cancelled">Geannuleerd</string>
+    <string name="end_trip">"Ultieme reis"</string>
+    <string name="scheduled">"Gepland"</string>
+    <string name="not_now">NIET NU</string>
+    <string name="camera_permission_description">Om foto\'s en video\'s vast te leggen, schakelt u &appname; om toegang te krijgen tot je camera en opslag</string>
+    <string name="storage_permission_description">Om de &appname; om toegang te krijgen tot uw opslag</string>
+    <string name="location_permission_description">Om een ​​link te verbinden, schakel &appname; om toegang te krijgen tot uw audio-instellingen</string>
+    <string name="audio_permission_description">Om noodcontacten toe te voegen, schakel &appname; om toegang te krijgen tot uw contacten</string>
+
+    <string name="settings">Instellingen</string>
+    <string name="drivewithuber">Rijd met &appname;</string>
+    <string name="legal">Mooi hoor</string>
+    <string name="whereto">Voer Bestemming in?</string>
+
+    <string name="pickuplocation">"Plaats van ontvangst"</string>
+    <string name="currentlocation">"Huidige locatie"</string>
+    <string name="setlocationonmap">"Stel locatie op kaart in"</string>
+    <string name="scheduleride">"Plan een rit"</string>
+
+    <string name="contact_C">"CONTACT"</string>
+    <string name="contact">"Contact"</string>
+    <string name="call">"Aanzetten"</string>
+    <string name="callsonly">"ALLEEN BELLEN"</string>
+
+
+
+
+
+
+    <string name="arrival">"13:51 aankomst"</string>
+    <string name="sharestatus">"Deel status"</string>
+    <string name="ratetext">"$79,76"</string>
+    <string name="mastercard">"MasterCard 2930"</string>
+    <string name="restaurantdelights">"Heerlijk restaurant"</string>
+    <string name="uberittowangs">"Uber naar Wangs"</string>
+    <string name="enrote">"Onderweg"</string>
+    <string name="mins">"mijn"</string>
+    <string name="min">"mijn"</string>
+    <string name="yourcurrenttrip">"Uw huidige reis"</string>
+    <string name="change">"Wijziging"</string>
+
+
+
+    <string name="notrip">"Je hebt geen reis"</string>
+    <string name="whatisyourname">"Wat is jouw naam?"</string>
+    <string name="confirmyourinformation">"Bevestig uw gegevens"</string>
+    <string name="first">"Voornaam"</string>
+    <string name="last">"Achternaam"</string>
+    <string name="email_s">"E-mail"</string>
+    <string name="password">Wachtwoord</string>
+    <string name="mobile_s">"Telefoonnummer"</string>
+    <string name="sigin_terms1">"Door verder te gaan, bevestig ik dat ik het heb gelezen en ermee akkoord ga"</string>
+    <string name="sigin_terms2">"Provincie</string>
+    <string name="sigin_terms3">"en"</string>
+    <string name="sigin_terms4">"Privacybeleid"</string>
+    <string name="cancelaccount_title">"Account aanmaken annuleren?"</string>
+    <string name="cancelaccount_msg">"Uw gegevens worden niet opgeslagen."</string>
+    <string name="confirm">"BEVESTIGEN"</string>
+    <string name="your_ride_with">"Uw rit met"</string>
+
+
+
+
+    <string name="error_msg_firstname">"Gelieve uw voornaam in te vullen"</string>
+    <string name="error_msg_lastname">"Gelieve uw achternaam in te voeren"</string>
+    <string name="error_msg_email">"Gelieve een geldig e-mailadres in te geven"</string>
+
+    <string name="error_msg_password">"Vul op zijn minst 6 karakters in"</string>
+    <string name="error_msg_rating">"Geef alstublieft uw beoordeling"</string>
+
+
+
+
+
+    <string name="InvalidMobileNumber">Ongeldig telefoonnummer</string>
+    <string name="InvalidPassword">Vul a.u.b. minimaal 6 tekens in</string>
+    <string name="Passwordmismatch">Incorrect wachtwoord</string>
+    <string name="Enteryourpassword">zet je wachtwoord</string>
+    <string name="Confirmyourpassword">Bevestig uw wachtwoord</string>
+
+
+
+
+    <string name="uberfee">"Toegangsprijs"</string>
+    <string name="distancefare">"Verre tarief"</string>
+    <string name="timefare">"Tijdtarief"</string>
+    <string name="estimatedpayout">"Totaal reistarief"</string>
+    <string name="wallet_amounts">"Portemonnee Waarde"</string>
+    <string name="promo_amounts">"Promotiewaarde"</string>
+
+
+    <string name="no_connection">Geen internet verbinding</string>
+
+
+    <string name="schedule">"TIJDLIJN "</string>
+
+    <string name="no_address_found">Sorry, geen adres gevonden</string>
+    <string name="UpcomingRideSet">"Volgende tourset"</string>
+    <string name="currentestimation">"Huidige koers schatting"</string>
+    <string name="pending">"In afwachting</string>
+    <string name="schedule_car_details">"Jongens"</string>
+    <string name="car_type">"&appname; X"</string>
+    <string name="date_time" translatable="false">"THU, Feb 20 at 10:25AM - 10:40AM"</string>
+    <string name="termschedule">"Werkelijke schatting die moet worden verstrekt vóór het ophalen Tarieven kunnen variëren als gevolg van verkeer, weer en andere factoren &appname; garandeert niet dat de chauffeur uw reisverzoek accepteert</string>
+    <string name="pasttrip">"Verleden"</string>
+    <string name="noschedulerides">"Je hebt geen aankomende ritten"</string>
+    <string name="amount_schedule" translatable="false">"$ 26-34"</string>
+    <string name="cancel_ride">"REIS ANNULEREN"</string>
+    <string name="upcomingtrips">"Volgende"</string>
+    <string name="no_location_data_provided">Geen locatiegegevens opgegeven</string>
+    <string name="service_not_available">Sorry, de service is niet beschikbaar</string>
+    <string name="invalid_lat_long_used">Ongeldige breedte- of lengtegraad gebruikt</string>
+    <string name="emergency_contacts">Contactpersonen voor noodgevallen</string>
+    <string name="let_s_make_travel_safe">Laten we de reis veilig maken</string>
+    <string name="alert_your_contact">Waarschuw uw dierbaren in geval van nood Voeg ze toe aan uw noodgeval         Contacten.</string>
+    <string name="you_can_add_5_contacts">U kunt maximaal 5 contacten toevoegen</string>
+    <string name="remove">Verwijder alle contacten om er nog een toe te voegen</string>
+    <string name="add_contacts">Contacten toevoegen</string>
+    <string name="testname" translatable="false">Vimal</string>
+    <string name="testphonenumber" translatable="false">+254 123547989</string>
+    <string name="delete">Verwijderen</string>
+    <string name="hr_eta">"&#160;uur&#160;"</string>
+
+
+    <string name="getting_car_detail">Autodetails…</string>
+    <string name="press_again_toexit">Druk nogmaals om af te sluiten</string>
+    <string name="sorry_no_rides">Sorry, er zijn momenteel geen tours beschikbaar</string>
+
+    <string name="try_again">probeer het nog eens</string>
+    <string name="try_again_later">PROBEER LATER</string>
+    <string name="receipt">Ontvangst</string>
+    <string name="addphoto">Voeg foto toe</string>
+    <string name="min_eta">&#160;Min</string>
+
+
+    <string name="gettinglocate">Locatie ophalen…</string>
+    <string name="phone">Telefoon</string>
+    <string name="verify">Controleren</string>
+    <string name="please_enter_promo">Voer de promotiecode in</string>
+    <string name="language">Taal</string>
+    <string name="selectlanguage">Selecteer de taal</string>
+    <string name="turnoninternet">zet je internet aan</string>
+    <string name="ok_c">Het gaat goed met hem</string>
+    <string name="setpickuptime">"INSTELLEN VAN DE AFHAALTIJD"</string>
+    <string name="driverarrrive">De chauffeur komt nu...</string>
+    <string name="yourtripcancelledbydriver">Uw reis geannuleerd door de chauffeur…</string>
+    <string name="yourtripbegin">Je reis begint nu...</string>
+    <string name="paymentcompleted">Betaling succesvol afgerond…</string>
+    <string name="rateyourride">Beoordeel je tour</string>
+    <string name="smoothorsloopy">Glad of slordig?</string>
+    <string name="writecomment">Schrijf uw opmerkingen...</string>
+    <string name="paymentdetails">Betalingsdetails</string>
+    <string name="otherreasons">andere redenen</string>
+    <string name="enterworkaddress">Voer bedrijfsadres in</string>
+    <string name="enterhomeaddress">Voer thuisadres in</string>
+
+
+
+
+
+    <string name="edit_ride">BEWERK TIJD</string>
+    <string name="people">Mensen</string>
+
+    <string name="network_failure">Controleer uw internetverbinding</string>
+    <string name="internal_server_error">Probeer het een paar keer opnieuw.</string>
+    <string name="img_src" translatable="false">/sdcard/NewTaxi/slectimage.png</string>
+    <string name="camera">Camera</string>
+    <string name="camera_roll">fotorol</string>
+
+    <string name="nocabs">in taxi\'s</string>
+    <string name="loading">Bezig met laden …</string>
+
+    <string name="no_cars">Er zijn geen auto\'s beschikbaar...</string>
+    <string name="no_cabs">in taxi\'s</string>
+    <string name="picker_today" translatable="false">Today</string>
+    <string name="picker_am" translatable="false">AM</string>
+    <string name="picker_pm" translatable="false">PM</string>
+
+    <string name="no_contacts_selected">Geen contact geselecteerd</string>
+    <string name="next">DE VOLGENDE</string>
+    <string name="message">bericht</string>
+    <string name="PeakPricing">PIEKTIJD PRIJS</string>
+    <string name="iAcceptHigherPrice">ACCEPTEER HET HOOGSTE TARIEF</string>
+    <string name="peakPriceDescription">"De vraag is ongekend! De tarieven zijn verhoogd om meer NewTaxi  Prime        op de           te krijgen."</string>
+    <string name="the_normal_fare">het normale tarief</string>
+    <string name="driver">Bestuurder</string>
+
+
+
+
+    <string name="minimum_fare">MINIMUM TARIEF</string>
+    <string name="signin">Log in</string>
+    <string name="register">Registratie</string>
+    <string name="enable_permissions_to_proceed_further">Toestemming inschakelen om door te gaan</string>
+    <string name="pickup_and_drop_location_is_same">De ophaal- en ophaallocatie is hetzelfde…</string>
+    <string name="unable_to_get_location">Kan locatie niet ophalen, probeer het opnieuw...</string>
+
+
+    <string name="send_a_message">Stuur een bericht</string>
+    <string name="referral">Referentie</string>
+    <string name="your_invite_code">je uitnodigingscode</string>
+    <string name="share_my_code">deel mijn code</string>
+
+    <string name="friends_incompleted">Vrienden - Onvolledig</string>
+    <string name="friends_completed">Vrienden - Voltooid</string>
+    <string name="referral_code_copied">Gekopieerde referentiecode</string>
+    <string name="referral_code_not_copied">Kan referentiecode niet kopiëren, code delen</string>
+    <string name="days_left">Resterende dagen</string>
+    <string name="need_to_complete">moet voltooien</string>
+    <string name="trips">reizen</string>
+    <string name="max_referral_earning_statement">Bereik %s voor alle vrienden die &amp; applicatie naam;</string>
+    <string name="referral_code_optional">Referentiecode (optioneel)</string>
+    <string name="earned">"Heeft gewonnen "</string>
+    <string name="no_referrals_yet">Nog geen referenties</string>
+
+    <string name="referral_expired">referentie verlopen</string>
+    <string name="skip">Springen</string>
+    <string name="rate_your_ride">Beoordeel je tour</string>
+    <string name="enter_wallet_amount">Voer het portemonneebedrag in</string>
+    <string name="manual_booking">Handmatige Boeking</string>
+
+    <string name="call_admin">bel %s</string>
+    <string name="contact_admin_for_manual_booking">Neem contact op met de beheerder om handmatig te boeken</string>
+    <string name="dial">Kies %s</string>
+    <string name="no_contact_found">geen contact gevonden</string>
+    <string name="share_to_contacts">delen met contacten</string>
+    <string name="share_code">Deel de code!</string>
+    <string name="mobile_verification">Mobiele verificatie</string>
+    <string name="please_enter_mobile_number">Voer uw telefoonnummer in</string>
+    <string name="invite_msg">Aanmelden</string>
+    <string name="select_reason">selecteer reden</string>
+
+
+    <string name="enter_otp">Typ OTP</string>
+    <string name="resend_otp">"Heb je de OTP niet gekregen?"</string>
+    <string name="otp_send_to_phone_description">"We hebben de toegangscode via sms verzonden \n voor verificatie van het mobiele nummer"</string>
+    <string name="send_OTP_again_in">U kunt OTP opnieuw verzenden naar:</string>
+    <string name="enter_valid_otp">Voer geldige OTP in!</string>
+    <string name="OTP">"OTP"</string>
+    <string name="add_tip">fooi toevoegen</string>
+    <string name="add_tip_amt">Tip %s voor chauffeur</string>
+
+    <string name="Pickup_or_Drop_Address_missing_please_try_again">Ontbrekend ontvangst- of afleveradres, probeer het opnieuw...</string>
+    <string name="set_tip">tip instellen</string>
+    <string name="your_trip_amout_was">"De waarde van uw reis was \t"</string>
+
+    <string name="waiting_charge_description">%s /min wachttoeslag van toepassing na %s min van aankomst totdat de reis begint.</string>
+    <string name="connected">Verbonden</string>
+    <string name="ringing">Aanraken</string>
+    <string name="connecting">Verbinden…</string>
+    <string name="enter_tip">tip invoegen</string>
+    <string name="location_not_enabled">locatie niet ingeschakeld!</string>
+    <string name="location_settings">Locatie-instellingen openen</string>
+
+    <string name="schedule_trip">reis plannen</string>
+    <string name="error_msg_unknown">Er is een onverwachte fout opgetreden</string>
+    <string name="tap_to_reload">tik om op te laden</string>
+    <string name="onlinepayment">Online betaling</string>
+    <string name="unable_to_get_location_pickup">Kan de ophaallocatie niet vinden, probeer het opnieuw</string>
+    <string name="to_arrive">bereiken</string>
+
+
+    <string name="to_reach">inhalen</string>
+    <string name="sign_fb">Inloggen met Facebook</string>
+    <string name="sign_google">Log in met Google</string>
+    <string name="sign_apple">Inloggen met Apple</string>
+
+    <string name="set_canceled">Installatie geannuleerd, probeer het opnieuw</string>
+    <string name="stripe_error_1">Er ging iets fout, probeer opnieuw</string>
+    <string name="stripe_error_2">ongeldige Stripe API-versie probeer het later opnieuw</string>
+
+    <string name="choose">Kiezen</string>
+    <string name="Add_payment_type">Betalingstype toevoegen</string>
+    <string name="choose_payment_type">Kies uw betalingstype</string>
+    <string name="confirm_seats">BEVESTIG STOELEN</string>
+    <string name="pool">zwembad</string>
+    <string name="driver_busy">Drukke chauffeur. Probeer het een paar keer opnieuw.o</string>
+    <string name="gender">Geslacht</string>
+    <string name="male">Man</string>
+    <string name="female">Vrouw</string>
+    <string name="error_gender">Kies je geslacht</string>
+
+    <plurals name="minutes">
+        <item quantity="one">%d&#160;Min</item>
+        <item quantity="other">%d&#160;Mins</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d&#160;hora&#160;</item>
+        <item quantity="other">%d"&#160;horas&#160;</item>
+    </plurals>
+    <string name="support">Steun</string>
+    <string name="not_valid_data">geen geldige gegevens</string>
+    <string name="new_version_available">Nieuwe versie beschikbaar</string>
+    <string name="update">Update</string>
+    <string name="update_desc">Werk onze app bij om van de nieuwste functies te genieten!</string>
+    <string name="update_desc1">Download de nieuwste versie om de app te gebruiken</string>
+    <string name="at">in</string>
+
+    <string name="accepted_request">Uw reis wordt geaccepteerd door de chauffeur</string>
+    <string name="seat_count">Stoel nr.:</string>
+    <string name="confirm_contact_number">Bevestig contactnummer</string>
+    <string name="continue_with_login">Een account hebben ?</string>
+    <string name="login">Log in</string>
+    <string name="forgot_password">Je wachtwoord vergeten ?</string>
+    <string name="welcome_back">Welkom terug</string>
+    <string name="login_to_continue">Log in om door te gaan</string>
+    <string name="continue_with_phone_number">Ga verder met telefoonnummer</string>
+    <string name="alert_your_contact_add">Laten we de reis veiliger maken</string>
+    <string name="addwork_location">werkplek toevoegen</string>
+    <string name="cancel_reason">Reden voor annulering</string>
+    <string name="select_view">Selecteer %s</string>
+    <string name="apple_login">Apple-login</string>
+    <string name="hello">Hallo</string>
+    <string name="grab_your_new_ride">Neem je nieuwe rit</string>
+    <string name="change_location">verander de locatie</string>
+    <string name="send_message">Bericht versturen</string>
+    <string name="add_home_location">Thuislocatie toevoegen</string>
+    <string name="add_work_location">werkplek toevoegen</string>
+    <string name="cancel_trip">Reis annuleren</string>
+    <string name="sos">Sos</string>
+    <string name="select_photo">selecteer een foto</string>
+    <string name="hey_user">Hallo %s</string>
+    <string name="contact_permission_description">Om uw reisgegevens te delen, moet &appname; om toegang te krijgen tot uw contacten</string>
+    <string name="pleaseConfirmyourpassword">bevestig alstublieft uw wachtwoord</string>
+    <string name="pleaseEnteryourpassword">Voer uw wachtwoord in</string>
+    <string name="valid_time">tijd verlopen</string>
+    <string name="covid_feature_title">Reis alleen als u asymptomatisch bent</string>
+    <string name="covid_desc_1">Maak de rit comfortabel en volg de veiligheidsregels om u en uw chauffeur veilig te houden !!</string>
+    <string name="covid_desc_2">Draag altijd een masker en houd social distance..</string>
+    <string name="covid_desc_3">Draag regelmatig een mondkapje en ontsmet uw handen voor en na het uitstappen.</string>
+    <string name="covid_desc_4">Maak geen ritje als je Covid-19 of gerelateerde symptomen hebt.</string>
+    <string name="covid_desc_5">Wees veilig en blijf gezond!!!</string>
+    <string name="covid_rating_desc">Zorg ervoor dat de rondleiding veilig wordt voltooid en dat de beveiligingsprotocollen worden gevolgd.</string>
+    <string name="enable_connection_and_come_back">Sta verbinding toe en kom terug</string>
+    <string name="you_are_viewing_old_data">U ziet gegevens offline, controleer uw netwerkverbinding</string>
+    <string name="retry">Herhalen</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="account">Account</string>
+    <string name="transfermoney">Transfer Money</string>
+    <string name="accountnum">Account Number</string>
+    <string name="send">Send Money</string>
+    <string name="wallet_transfer">Wallet Transfer</string>
+    <string name="razorpay">Razorpay</string>
+    <string name="razorpaypayment">Razorpay Paynment</string>
+    <string name="paystack">Paystack Payment</string>
+    <string name="mollie">Mollie</string>
+</resources> 
+
