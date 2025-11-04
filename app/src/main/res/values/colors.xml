@@ -103,5 +103,10 @@
 
     <!-- Adicionados para corrigir erros de build -->
     <color name="colorBlack">#000000</color>
-
+    <color name="promo_background">#4CAF50</color> <!-- fundo verde de botões promocionais -->
+    <color name="round_next_color">#2196F3</color> <!-- azul do botão próximo -->
+    <color name="destination_red_marker">#F44336</color> <!-- marcador vermelho -->
+    <color name="promotion_bg_color">#81C784</color> <!-- fundo verde claro -->
+    <color name="sending_request_black">#000000</color> <!-- texto preto -->
+    <color name="sending_request_blue">#1565C0</color> <!-- azul escuro -->
 </resources>
