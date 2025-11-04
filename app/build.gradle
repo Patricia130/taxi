@@ -152,6 +152,10 @@ dependencies {
     def lifecycle_version = '2.6.1'
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // ✅ Corrige os erros de multidex e PolyUtil (faltando antes)
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.5'
 }
 
 apply plugin: 'com.google.gms.google-services'
