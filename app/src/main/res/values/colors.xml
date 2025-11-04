@@ -1,94 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Tema principal -->
     <color name="colorPrimary">#171616</color>
     <color name="colorPrimaryDark">#006161</color>
     <color name="colorAccent">#000000</color>
 
+    <!-- Tema escuro -->
     <color name="dark_colorPrimary">#006161</color>
     <color name="dark_colorPrimaryDark">#00796B</color>
     <color name="dark_colorAccent">#FFC107</color>
 
+    <!-- Cores básicas -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#808080</color>
+    <color name="transparent">#00000000</color>
 
-    <color name="linegray">#8a000000</color>
-    // grey line in add wallet
+    <!-- Linhas e divisores -->
+    <color name="linegray">#8A000000</color>
+    <color name="contact_border_color">#FFA3A3A3</color>
+    <color name="contact_border_greycolor">#FFEDEDED</color>
+    <color name="whereto_border_color">#FFABABAB</color>
+    <color name="whereto_vertical_line">#FFB2B2B2</color>
+    <color name="chat_gray_border">#DBD8D8</color>
+    <color name="chat_input_default_border">#FFeAEAEA</color>
 
+    <!-- Fundo -->
+    <color name="background_color">#161616</color>
+    <color name="white_bgcolor">#FFFFFFFF</color>
+    <color name="infobackcolur">#F2F2F4</color>
+    <color name="card_background">#006161</color>
+    <color name="accountkit_input_bacground_color">#F1F0F0</color>
+    <color name="chat_input_background">#FFF6F6F6</color>
+    <color name="currentloc_bgcolor_placesearch">#FFF8F8F8</color>
+    <color name="placesearch_bggrey_color">#FFF1F1F1</color>
 
-    <color name="white">#ffffff</color>
-    <color name="blue_light">#5B85A6</color>
-    <color name="infobackcolur">#f2f2f4</color>
+    <!-- Picker -->
     <color name="picker_background">#006161</color>
     <color name="picker_button_background_selected">#006161</color>
     <color name="picker_button_background">@android:color/white</color>
     <color name="picker_button_background_innactive">#BDBDBD</color>
-    <color name="picker_default_text_color">#999</color>
+    <color name="picker_default_text_color">#999999</color>
     <color name="picker_default_selected_text_color">@android:color/black</color>
     <color name="picker_default_selector_color">#646464</color>
 
-
+    <!-- Diversos -->
     <color name="pickup_dest_point_color">#37000000</color>
-    <color name="dialog_deny_grey">#ffdee6e6</color>
-    <color name="ub__black">#ff000000</color>
+    <color name="dialog_deny_grey">#FFDEE6E6</color>
+    <color name="ub__black">#FF000000</color>
     <color name="lavender">#006161</color>
-    <color name="card_background">#006161</color>
+    <color name="custom_progress_green">#FF27AA0B</color>
+    <color name="notification_black">#FF000000</color>
 
-    <color name="custom_progress_green">#ff27aa0b</color>
-    <color name="notification_black">#ff000000</color>
+    <!-- RecyclerView de preço -->
+    <color name="price_recycler_black_color">#FF000000</color>
+    <color name="price_recycler_green_color">#FF27AA0B</color>
 
-
-    <!--price recycler view color-->
-    <color name="price_recycler_black_color">#ff000000</color>
-    <color name="price_recycler_green_color">#ff27aa0b</color>
-
-
-    <color name="sending_request_black">#ff000000</color>
-    <color name="contact_border_color">#ffa3a3a3</color>
-    // driver contact boarder color
-    <color name="whereto_border_color">#ffababab</color>
-    // where to rectangle white color
-    <color name="currentloc_bgcolor_placesearch">#fff8f8f8</color>
-    <color name="placesearch_bggrey_color">#fff1f1f1</color>
-    <color name="promotion_bg_color">#ff218a00</color>
-    <color name="destination_red_marker">#fff32f00</color>
-    <color name="transparent">#00000000</color>
-    <color name="radio_button_blue">#006161</color>
-    <color name="radio_button_black">#ff6b6b76</color>
-    <color name="promo_background">#ff0e9e5e</color>
-    <color name="sending_request_blue">#006161</color>
-    <color name="contact_border_greycolor">#ffededed</color>
-    <color name="white_bgcolor">#ffffffff</color>
-    <color name="whereto_vertical_line">#ffb2b2b2</color>
-
-
-    <color name="chat_input_background">#fff6f6f6</color>
-    <color name="chat_input_default_border">#ffeaeaea</color>
-    <color name="chat_gray_border">#dbd8d8</color>
-    <color name="accountkit_input_bacground_color">#f1f0f0</color>
-
-
-    // text font color
-    <color name="green_text_color">#ff27aa0b</color>
-    <color name="header_color">#000000</color>
-    <color name="background_color">#161616</color>
+    <!-- Botões e texto -->
     <color name="button_color">#000000</color>
-    <color name="button_disable_color">#dbd8d8</color>
-    <color name="cancel_text_color">#37000000</color>
+    <color name="button_disable_color">#DBD8D8</color>
     <color name="button_disable_darkgrey_color">#37000000</color>
     <color name="button_color_blue">#006161</color>
-    <color name="text_black">#de000000</color>
+    <color name="light_blue_button_color">#006161</color>
+
+    <!-- Texto -->
+    <color name="header_color">#000000</color>
+    <color name="text_black">#DE000000</color>
+    <color name="textgray">#8A000000</color>
+    <color name="text_light_gray">#80000000</color>
+    <color name="text_light_black">#888888</color>
+    <color name="green_text_color">#FF27AA0B</color>
     <color name="blue_text_color">#006161</color>
     <color name="blue_light_text_color">#006161</color>
     <color name="blue_light_loader_color">#006161</color>
-    <color name="light_blue_button_color">#006161</color>
-    <color name="textgray">#8a000000</color>
-    <color name="text_light_gray">#80000000</color>
-    <color name="text_light_black">#888888</color>
+    <color name="cancel_text_color">#37000000</color>
     <color name="red_text_color">#BA605F</color>
-    <color name="round_next_color">#de000000</color>
+
+    <!-- Ícones sociais -->
     <color name="fb_bg">#0F5999</color>
     <color name="google_bg">#DF5746</color>
 
-
-    <!--        App color code        -->
+    <!-- App colors -->
     <color name="newtaxi_app_yellow">#006161</color>
     <color name="newtaxi_app_black">#303841</color>
     <color name="newtaxi_app_light_grey">#80303841</color>
@@ -99,14 +92,16 @@
     <color name="newtaxi_app_yellow_outline">#37000000</color>
     <color name="newtaxi_app_black_dark">#141414</color>
     <color name="newtaxi_app_black_dot">#0D1724</color>
-
     <color name="newtaxi_app_text_ash">#A9A9A9</color>
     <color name="newtaxi_app_red">#FF2F38</color>
     <color name="newtaxi_app_ash_light">#88888829</color>
     <color name="newtaxi_app_border_shadow">#F4F4F4</color>
     <color name="newtaxi_app_divider_grey">#C7C7C7</color>
     <color name="newtaxi_app_yellow_dim">#FEF9EB</color>
-    <color name="newtaxi_app_yellow_disable">#d2f0eb</color>
+    <color name="newtaxi_app_yellow_disable">#D2F0EB</color>
     <color name="newtaxi_app_yellow_fade">#12F6C92E</color>
+
+    <!-- Adicionados para corrigir erros de build -->
+    <color name="colorBlack">#000000</color>
 
 </resources>
