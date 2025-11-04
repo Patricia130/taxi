@@ -12,15 +12,23 @@ workflows:
           export JAVA_HOME=$(/usr/libexec/java_home -v 17)
           export PATH=$JAVA_HOME/bin:$PATH
           echo "Usando Java 17 em $JAVA_HOME"
+
+      - name: Dar permissão ao gradlew
+        script: chmod +x ./gradlew
+
       - name: Limpar projeto
         script: ./gradlew clean
+
       - name: Compilar APK de release
         script: ./gradlew assembleRelease
+
       - name: Compilar AAB de release
         script: ./gradlew bundleRelease
+
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
       - app/build/outputs/bundle/release/app-release.aab
+
     publishing:
       email:
         recipients:
